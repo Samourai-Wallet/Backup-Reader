@@ -10,7 +10,7 @@ Decrypts Samourai Wallet backup using BIP39 passphrase of wallet. Unencrypted pa
 
 ### License:
 
-[Unlicense] (https://github.com/Samourai-Wallet/Afterburner/blob/master/LICENSE)
+[Unlicense] (https://github.com/Samourai-Wallet/Backup-Reader/blob/master/LICENSE)
 
 ### Contributing:
 
