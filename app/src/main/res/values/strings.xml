@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Samourai Backup Reader</string>
+    <string name="version_name">1.0</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="encrypted_backup">Encrypted wallet data</string>
+    <string name="decryption_error">There was an error while decrypting your wallet backup. Please try again.</string>
+    <string name="restore_wallet_from_backup">Restore wallet from backup</string>
+
+    <string name="invalid_passphrase">Invalid passphrase</string>
+    <string name="passphrase">Passphrase</string>
+
+    <string name="decrypted_backup">Decrypted backup</string>
+
+</resources>
