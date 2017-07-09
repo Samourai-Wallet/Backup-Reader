@@ -14,6 +14,9 @@ import android.widget.Toast;
 import com.samourai.crypto.AESUtil;
 import com.samourai.util.CharSequenceX;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -66,9 +69,23 @@ public class MainActivity extends AppCompatActivity {
                                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int whichButton) {
 
-                                        String encrypted = edBackup.getText().toString();
-                                        if (encrypted == null || encrypted.length() < 1) {
+                                        String data = edBackup.getText().toString();
+                                        if (data == null || data.length() < 1) {
                                             Toast.makeText(MainActivity.this, R.string.decryption_error, Toast.LENGTH_SHORT).show();
+                                        }
+
+                                        String encrypted = null;
+                                        try {
+                                            JSONObject jsonObj = new JSONObject(data);
+                                            if(jsonObj != null && jsonObj.has("payload"))    {
+                                                encrypted = jsonObj.getString("payload");
+                                            }
+                                            else    {
+                                                encrypted = data;
+                                            }
+                                        }
+                                        catch(JSONException je) {
+                                            encrypted = data;
                                         }
 
                                         String decrypted = null;

@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Samourai Backup Reader</string>
-    <string name="version_name">1.0</string>
+    <string name="version_name">1.1</string>
 
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
